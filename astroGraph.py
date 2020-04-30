@@ -27,9 +27,9 @@ q = np.array(nx.degree(G))
 
 if display:
     print("Graph has %d nodes and %d edges" %(n,m))
-    print("Average clustring coefficient: %f" %(c_ave))
+    print("Average clustering coefficient: %f" %(c_ave))
     print("Average number of collaborators per author: %f" %(q[:,1].mean()))
-    plt.figure()
+    plt.figure() #Cf. figure 1 in Newman (2001)
     plt.loglog(H,'.')
     plt.xlabel('Number of collaborators')
     plt.ylabel('Frequency')
